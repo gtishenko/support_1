@@ -1,10 +1,10 @@
 <?php
 $action = $_GET['action'];
 
-$servername = "localhost";
-$username = "id15006669_evgrg";
-$password = "f0dwwJJdK&HvDdqy";
-$dbname = "id15006669_bd";
+$servername = "";
+$username = "";
+$password = "";
+$dbname = "";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
