@@ -85,6 +85,8 @@ class HomePanelBase extends React.Component {
             this.showError('Пожалуйста, проверьте правильность заполнения поля "Номер телефона".');
         }
 
+        //1
+
         fetch('https://evgrg.000webhostapp.com/testapi.php?action=saveUser&firstName=' + this.state.name.split(' ')[1] + '&lastName=' + this.state.name.split(' ')[0] + '&middleName=' + this.state.name.split(' ')[2] + '&phone=' + this.state.number + '&text=' + this.state.text).then(response => response.text())
         .then((data) => {
             data = JSON.parse(data);
