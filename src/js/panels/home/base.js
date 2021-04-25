@@ -42,6 +42,7 @@ class HomePanelBase extends React.Component {
 
         this.showError = this.showError.bind(this);
         this.showSuccess = this.showSuccess.bind(this);
+        this.sendRequest = this.sendRequest.bind(this);
     }
 
     showError(text) {
@@ -84,7 +85,7 @@ class HomePanelBase extends React.Component {
             this.showError('Пожалуйста, проверьте правильность заполнения поля "Номер телефона".');
         }
 
-        fetch('http://evgrg.000webhostapp.com/testapi.php?action=saveUser&firstName=' + this.state.name.split(' ')[1] + '&lastName=' + this.state.name.split(' ')[0] + '&middleName=' + this.state.name.split(' ')[2] + '&phone=' + this.state.number + '&text=' + this.state.text).then(response => response.text())
+        fetch('https://evgrg.000webhostapp.com/testapi.php?action=saveUser&firstName=' + this.state.name.split(' ')[1] + '&lastName=' + this.state.name.split(' ')[0] + '&middleName=' + this.state.name.split(' ')[2] + '&phone=' + this.state.number + '&text=' + this.state.text).then(response => response.text())
         .then((data) => {
             data = JSON.parse(data);
             if(data.result) {
